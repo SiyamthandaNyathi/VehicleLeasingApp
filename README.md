@@ -43,3 +43,4 @@ This ASP.NET MVC (.NET Framework) application allows a leasing company to manage
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/VehicleLeasingApp.git
+   https://github.com/SiyamthandaNyathi/VehicleLeasingApp/tree/master
