@@ -9,7 +9,7 @@ namespace VehicleLeasingApp.Models
             context.Database.EnsureCreated();
 
             if (context.Suppliers.Any())
-                return; // DB has been seeded
+                return; 
 
             var suppliers = new[]
             {

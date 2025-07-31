@@ -48,9 +48,7 @@ namespace VehicleLeasingApp.Controllers
             return View();
         }
 
-        // POST: Suppliers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,ContactInfo")] Supplier supplier)
@@ -64,7 +62,7 @@ namespace VehicleLeasingApp.Controllers
             return View(supplier);
         }
 
-        // GET: Suppliers/Edit/5
+        // GET: Suppliers/Edit
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,9 +78,7 @@ namespace VehicleLeasingApp.Controllers
             return View(supplier);
         }
 
-        // POST: Suppliers/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ContactInfo")] Supplier supplier)
@@ -115,7 +111,7 @@ namespace VehicleLeasingApp.Controllers
             return View(supplier);
         }
 
-        // GET: Suppliers/Delete/5
+        // GET: Suppliers/Delete
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,7 +129,7 @@ namespace VehicleLeasingApp.Controllers
             return View(supplier);
         }
 
-        // POST: Suppliers/Delete/5
+        // POST: Suppliers/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

@@ -24,7 +24,7 @@ namespace VehicleLeasingApp.Controllers
             return View(await _context.Drivers.ToListAsync());
         }
 
-        // GET: Drivers/Details/5
+        // GET: Drivers/Details
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -48,9 +48,7 @@ namespace VehicleLeasingApp.Controllers
             return View();
         }
 
-        // POST: Drivers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,LicenseNumber")] Driver driver)
@@ -64,7 +62,7 @@ namespace VehicleLeasingApp.Controllers
             return View(driver);
         }
 
-        // GET: Drivers/Edit/5
+        // GET: Drivers/Edit/
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,9 +78,7 @@ namespace VehicleLeasingApp.Controllers
             return View(driver);
         }
 
-        // POST: Drivers/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,LicenseNumber")] Driver driver)
@@ -115,7 +111,7 @@ namespace VehicleLeasingApp.Controllers
             return View(driver);
         }
 
-        // GET: Drivers/Delete/5
+        // GET: Drivers/Delete/
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,7 +129,7 @@ namespace VehicleLeasingApp.Controllers
             return View(driver);
         }
 
-        // POST: Drivers/Delete/5
+        // POST: Drivers/Delete/
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
